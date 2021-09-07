@@ -1,7 +1,8 @@
 pipeline {
   agent {
-    node {
-      label 'node.12'
+    docker {
+      image 'node:12'
+      args '--network jenkins-blue-ocean-tutorial_mynet'
     }
 
   }
